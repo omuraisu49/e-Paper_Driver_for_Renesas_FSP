@@ -52,7 +52,7 @@ bsp_io_port_pin_t EPD_CS_PIN;
 bsp_io_port_pin_t EPD_BUSY_PIN;
 
 volatile bool DEV_spi_transfer_complete_flag = false;
-const spi_instance_t * DEV_spi_instance;
+spi_instance_t * DEV_spi_instance;
 
 void DEV_SPI_WriteByte(UBYTE value)
 {
@@ -78,9 +78,9 @@ void DEV_Module_Exit(void)
     DEV_Digital_Write(EPD_RST_PIN, 0);
 }
 
-void DEV_Config_Set(const spi_instance_t * _spi_instance, bsp_io_port_pin_t _rst_pin, bsp_io_port_pin_t _cs_pin, bsp_io_port_pin_t _dc_pin, bsp_io_port_pin_t _busy_pin)
+void DEV_Config_Set(spi_instance_t * _spi_instance, bsp_io_port_pin_t _rst_pin, bsp_io_port_pin_t _cs_pin, bsp_io_port_pin_t _dc_pin, bsp_io_port_pin_t _busy_pin)
 {
-    DEV_spi_instance = _spi_instance;
+    DEV_spi_instance = (spi_instance_t *)_spi_instance;
     EPD_RST_PIN = _rst_pin;
     EPD_CS_PIN = _cs_pin;
     EPD_DC_PIN = _dc_pin;

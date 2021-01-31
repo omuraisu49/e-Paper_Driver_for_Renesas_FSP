@@ -95,11 +95,11 @@ bsp_io_level_t DEV_Digital_Read(bsp_io_port_pin_t _pin);
  * spi module instance
 **/
 extern volatile bool DEV_spi_transfer_complete_flag;
-extern const spi_instance_t * DEV_spi_instance;
+extern spi_instance_t * DEV_spi_instance;
 
 
 void DEV_SPI_WriteByte(UBYTE value);
 int DEV_Module_Init(void);
 void DEV_Module_Exit(void);
-void DEV_Config_Set(const spi_instance_t * _spi_instance, bsp_io_port_pin_t _rst_pin, bsp_io_port_pin_t _cs_pin, bsp_io_port_pin_t _dc_pin, bsp_io_port_pin_t _busy_pin);
+void DEV_Config_Set(spi_instance_t * _spi_instance, bsp_io_port_pin_t _rst_pin, bsp_io_port_pin_t _cs_pin, bsp_io_port_pin_t _dc_pin, bsp_io_port_pin_t _busy_pin);
 #endif
