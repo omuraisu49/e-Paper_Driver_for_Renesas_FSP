@@ -105,8 +105,8 @@ int EPD_1in02d_test(void)
     DEV_Delay_ms(2000);
 
     Paint_Clear(WHITE);
-    Paint_DrawString_CN(0, 10,"ƒ„∫√abc ˜›Æ≈…", &Font12CN, BLACK, WHITE);
-    Paint_DrawString_CN(0, 30,"Œ¢—©µÁ◊”", &Font24CN, WHITE, BLACK);
+    Paint_DrawString_CN(0, 10,"√Ñ√£¬∫√Éabc√ä√∑√ù¬Æ√Ö√â", &Font12CN, BLACK, WHITE);
+    Paint_DrawString_CN(0, 30,"√é¬¢√ë¬©¬µ√ß√ó√ì", &Font24CN, WHITE, BLACK);
     printf("EPD_1IN02_Display\r\n");
     EPD_1IN02_Display(BlackImage);
     DEV_Delay_ms(2000);
@@ -165,7 +165,7 @@ int EPD_1in02d_test(void)
     BlackImage = NULL;
 
     // close 5V
-    printf("close 5V, Module enters 0 power consumption ...\r\n");
+//     printf("close 5V, Module enters 0 power consumption ...\r\n");
     DEV_Module_Exit();
     
     return 0;
