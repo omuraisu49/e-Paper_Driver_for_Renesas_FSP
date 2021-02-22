@@ -1,5 +1,5 @@
 # English
-## e-Pape driver for Renesas FSP
+## e-Paper driver for Renesas FSP
 This driver is possible to use Waveshare e-Paper module on Renesas RA MCU.
 
 Renesas RA MCU provides software called [Flexible Software Package (FSP)](https://www.renesas.com/tw/ja/software-tool/flexible-software-package-fsp) that includes HAL driver, RTOS, and various middleware. This driver is designed to implemet on this FSP, and user can use the e-Paper module without any special modification.
